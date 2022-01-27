@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="hotel-impl-sysapiFlow" doc:id="0da51764-2924-44a4-8a13-a82e0f44d9fa" >
+		<logger level="INFO" doc:name="Logger" doc:id="d4edd793-4055-4ebf-9ada-c0af5512f3c5" message="hotel impl flow started at #[now()]"/>
+		<http:request method="POST" doc:name="Request" doc:id="a44168b3-d981-4bc9-9638-9f38dba012b0" url="https://f0a5c9d6-d1e3-4ffd-937a-73388d4ae420.mock.pstmn.io/hotel"/>
+		<logger level="INFO" doc:name="Logger" doc:id="de0a72bb-f939-48ab-9dd8-ed4ffa3e7d3c" message="hotel impl flow ended at #[now()]"/>
+	</flow>
+</mule>

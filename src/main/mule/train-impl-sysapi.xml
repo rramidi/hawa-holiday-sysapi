@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="f7d15c99-696e-4365-a836-251d2b13fd1c" />
+	<flow name="train-impl-sysapiFlow" doc:id="faa4977f-b6a0-4227-94ef-2b2e6e0f0eba" >
+		<logger level="INFO" doc:name="Logger" doc:id="efa08c65-d2ff-40ff-84ea-9fd6b0065ad6" message="train impl flow started at #[now()]"/>
+		<http:request method="POST" doc:name="Request" doc:id="9aea916f-80dc-492d-90bc-adf68e9f9fc1" url="https://f0a5c9d6-d1e3-4ffd-937a-73388d4ae420.mock.pstmn.io/train" config-ref="HTTP_Request_configuration"/>
+		<logger level="INFO" doc:name="Logger" doc:id="b65121b0-c291-48da-9752-d67f21f32db0" />
+	</flow>
+</mule>

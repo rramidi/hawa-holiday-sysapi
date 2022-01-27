@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="flight-impl-sysapiFlow" doc:id="8f337771-798e-4716-a1d2-361d11b90b61" >
+		<logger level="INFO" doc:name="Logger" doc:id="1fe002e4-5e2d-4666-9fd5-0d7a6319e442" message="flight impl flow started at #[now()]"/>
+		<http:request method="POST" doc:name="Request" doc:id="c8fc4994-1a3a-40c0-b8e9-60a0c5c98261" url="https://f0a5c9d6-d1e3-4ffd-937a-73388d4ae420.mock.pstmn.io/flight"/>
+		<logger level="INFO" doc:name="Logger" doc:id="872495cc-4b4c-4436-8202-6d456233af4b" message="flight impl flow ended at #[now()]"/>
+	</flow>
+</mule>
