@@ -1,0 +1,43 @@
+#%RAML 1.0
+title: Holiday System API
+/train:
+  post:
+    body:
+      application/json:
+        example: !include example/train-input.raml
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include example/train-output.raml
+              
+/cab:
+  post:
+    body:
+      application/json:
+        example: !include example/cab-input.raml
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include example/cab-output.raml
+/hotel:
+  post:
+    body:
+      application/json:
+        example: !include example/hotel-input.raml
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include example/hotel-output.raml
+/flight:
+  post:
+    body:
+      application/json:
+        example: !include example/flight-input.raml
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include example/flight-output.raml
